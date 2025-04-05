@@ -12,7 +12,7 @@ diagnose_task = Task(
 
         save the the following columns:
         - patient_id: The patient ID.
-        - diagnosis: The diagnosis of the medical history.
+        - diagnosis: A single diagnosis of the medical history.
         """
     ),
     tools=[save_csv],
