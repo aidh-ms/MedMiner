@@ -24,6 +24,7 @@ python = "^3.13"
 smolagents = {extras = ["transformers"], version = "^1.13.0"}
 httpx = "^0.28.1"
 torch = "^2.6.0"
+gradio = "^5.24.0"
 
 [tool.poetry.group.openai.dependencies]
 openai = "^1.72.0"
