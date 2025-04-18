@@ -34,7 +34,7 @@ def save_csv(
 
     # small hack to get all keys from all dictionaries to have all possible columns
     fieldnames = dict.fromkeys(chain.from_iterable([d.keys() for d in data])).keys()
-    file_path = Path.cwd() / "result" / f"{task_name}.csv"
+    file_path = Path(__file__).parent.parent.parent / "result" / f"{task_name}.csv"
     if not file_path.parent.exists():
         file_path.parent.mkdir(parents=True)
 
