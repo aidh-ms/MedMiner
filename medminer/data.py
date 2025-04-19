@@ -11,6 +11,6 @@ class Document:
     def content(self) -> str:
         return dedent(
             f"""\
-            Patiend: {self.patient_id}\n{indent(self.text, " " * 4 * 3)}
+            Patient: {self.patient_id}\n{indent(self.text, " " * 4 * 3)}
             """
         )
