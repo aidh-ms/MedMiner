@@ -23,7 +23,8 @@
 				"ms-vsliveshare.vsliveshare",
 				"GitHub.vscode-pull-request-github",
 				"github.vscode-github-actions",
-				"ms-toolsai.jupyter"
+				"ms-toolsai.jupyter",
+				"ms-python.debugpy"
 			],
 			"settings": {
 				"[python]": {
