@@ -4804,15 +4804,15 @@ files = [
 
 [[package]]
 name = "smolagents"
-version = "1.19.0"
+version = "1.20.0"
 description = "🤗 smolagents: a barebones library for agents. Agents write python code to call tools or orchestrate other agents."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 markers = "platform_python_implementation == \"PyPy\""
 files = [
-    {file = "smolagents-1.19.0-py3-none-any.whl", hash = "sha256:e33be79a85059613a771e29af8f24f1ed2f0d0d84c02bb1c503d655f1de5f4d3"},
-    {file = "smolagents-1.19.0.tar.gz", hash = "sha256:e05426d59950f6ee4d082b5704f3831c17dbef11fa739a1dfaae0ccbaee175fc"},
+    {file = "smolagents-1.20.0-py3-none-any.whl", hash = "sha256:a838fcee1c06bae8f6c907992d2f08385f4a3a33938bb578e3c4f42111f9bd21"},
+    {file = "smolagents-1.20.0.tar.gz", hash = "sha256:b59950b7f6d4e51930bb651793046d9aea6856f8680651680c51a9202bec35ff"},
 ]
 
 [package.dependencies]
@@ -5916,4 +5916,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "3cc4db1820a14cfcb0e80e805bbc5e1e2aa2d7e95fbb78afb40d1cc9a27cc171"
+content-hash = "724a334e0980978c91b831b168f0fd2146e83026658b0cf7389a98697d6a692b"
