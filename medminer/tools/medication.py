@@ -23,11 +23,9 @@ def extract_medication_data(
             - medication_name_corrected: Use the following format "Brand name or medication name (active ingredient)". e.g. "Aspirin (acetylsalicylic acid)" and correct any spelling errors.
             - dose: The dose of the medication. this sould only contain the numeric value.
             - unit: The unit of the dose (e.g. ml, mg, ...). if not applicable, write an empty string.
-            - dosage_morning: The dose in the morning. if not applicable, write a 0.
-            - dosage_noon: The dose in the noon. if not applicable, write a 0.
-            - dosage_evening: The dose in the evening. if not applicable, write a 0.
-            - dosage_night: The dose in the night. if not applicable, write a 0.
-            - dosage_information: Additional information about the dosage. if not applicable, write an empty string.
+            - route: The route of administration of the medication. if not applicable, write an empty string.
+            - frequency: The raw frequency text of the medication. if not applicable, write an empty string.
+            - frequency_code: The frequency code of the medication. if not applicable, write an empty string.
 
     Returns:
         A message indicating where the data was saved.
