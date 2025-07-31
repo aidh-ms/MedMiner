@@ -30,7 +30,7 @@ pandas-stubs = "^2.3.0.250703"
 pre-commit = "^4.2.0"
 
 [tool.poetry.group.openai.dependencies]
-openai = "^1.97.1"
+openai = "^1.98.0"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.17.0"
