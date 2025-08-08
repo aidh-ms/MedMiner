@@ -4856,15 +4856,15 @@ files = [
 
 [[package]]
 name = "smolagents"
-version = "1.20.0"
+version = "1.21.0"
 description = "🤗 smolagents: a barebones library for agents. Agents write python code to call tools or orchestrate other agents."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 markers = "platform_python_implementation == \"PyPy\""
 files = [
-    {file = "smolagents-1.20.0-py3-none-any.whl", hash = "sha256:a838fcee1c06bae8f6c907992d2f08385f4a3a33938bb578e3c4f42111f9bd21"},
-    {file = "smolagents-1.20.0.tar.gz", hash = "sha256:b59950b7f6d4e51930bb651793046d9aea6856f8680651680c51a9202bec35ff"},
+    {file = "smolagents-1.21.0-py3-none-any.whl", hash = "sha256:bb1b91ddf0d8a1ac6287a42366ae2a0c477c20c02996c22e6215f629cfefe8ae"},
+    {file = "smolagents-1.21.0.tar.gz", hash = "sha256:b585b78706c80b30978626ba7ceb91831381a4189078e51ed94cc0db8d8eadad"},
 ]
 
 [package.dependencies]
@@ -4889,13 +4889,13 @@ docker = ["docker (>=7.1.0)", "websocket-client"]
 e2b = ["e2b-code-interpreter (>=1.0.3)", "python-dotenv (>=1.0.1)"]
 gradio = ["gradio (>=5.14.0)"]
 litellm = ["litellm (>=1.60.2)"]
-mcp = ["mcp", "mcpadapt (>=0.1.8)"]
+mcp = ["mcp", "mcpadapt (>=0.1.11)"]
 mlx-lm = ["mlx-lm"]
 openai = ["openai (>=1.58.1)"]
 quality = ["ruff (>=0.9.0)"]
 telemetry = ["arize-phoenix", "openinference-instrumentation-smolagents (>=0.1.4)", "opentelemetry-exporter-otlp", "opentelemetry-sdk"]
-test = ["Wikipedia-API (>=0.8.1)", "ipython (>=8.31.0)", "pandas (>=2.2.3)", "pytest (>=8.1.0)", "pytest-datadir", "python-dotenv (>=1.0.1)", "rank-bm25", "smolagents[all]"]
-toolkit = ["duckduckgo-search (>=6.3.7)", "markdownify (>=0.14.1)"]
+test = ["Wikipedia-API (>=0.8.1)", "ipython (>=8.31.0)", "mlx[cpu]", "pandas (>=2.2.3)", "pytest (>=8.1.0)", "pytest-datadir", "pytest-timeout", "python-dotenv (>=1.0.1)", "rank-bm25", "smolagents[all]"]
+toolkit = ["ddgs (>=9.0.0)", "markdownify (>=0.14.1)"]
 torch = ["numpy (>=1.21.2)", "torch", "torchvision"]
 transformers = ["accelerate", "smolagents[torch]", "transformers (>=4.0.0)"]
 vision = ["helium", "selenium"]
@@ -5968,4 +5968,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "3949623177d6304721181cdd395f9f282f5ad60e8da9bf3b20863e24f79ecebf"
+content-hash = "70e7a197251d7957ec2c37a713b9268968ce8734a9a60d917b7329889e3cbe73"
