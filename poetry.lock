@@ -1095,15 +1095,15 @@ dev = ["flake8", "markdown", "twine", "wheel"]
 
 [[package]]
 name = "gradio"
-version = "5.41.1"
+version = "5.42.0"
 description = "Python library for easily interacting with trained machine learning models"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 markers = "platform_python_implementation == \"PyPy\""
 files = [
-    {file = "gradio-5.41.1-py3-none-any.whl", hash = "sha256:4e1cfef903cbe642587ebe3183daea42c39cba4f622888fc09353a6d9a04ebfa"},
-    {file = "gradio-5.41.1.tar.gz", hash = "sha256:c7b9ba816d7b720ed9ee44170c9df0039c7015e85ea4adb1644568ada4a8fa92"},
+    {file = "gradio-5.42.0-py3-none-any.whl", hash = "sha256:3e11c076f4eaa2d545fb176551a2a72e951374882b8543aeebd45739085da5d2"},
+    {file = "gradio-5.42.0.tar.gz", hash = "sha256:74c8e18a3e6b7bd26396e8ed949521c0cde9bed68a15f589a9706f7cbcb8685f"},
 ]
 
 [package.dependencies]
@@ -1113,7 +1113,7 @@ audioop-lts = {version = "<1.0", markers = "python_version >= \"3.13\""}
 brotli = ">=1.1.0"
 fastapi = ">=0.115.2,<1.0"
 ffmpy = "*"
-gradio-client = "1.11.0"
+gradio-client = "1.11.1"
 groovy = ">=0.1,<1.0"
 httpx = ">=0.24.1,<1.0"
 huggingface-hub = ">=0.33.5,<1.0"
@@ -1144,15 +1144,15 @@ oauth = ["authlib", "itsdangerous"]
 
 [[package]]
 name = "gradio-client"
-version = "1.11.0"
+version = "1.11.1"
 description = "Python library for easily interacting with trained machine learning models"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 markers = "platform_python_implementation == \"PyPy\""
 files = [
-    {file = "gradio_client-1.11.0-py3-none-any.whl", hash = "sha256:afb714aea50224f6f04679fe2ce79c1be75011012d0dc3b3ee575610a0dc8eb2"},
-    {file = "gradio_client-1.11.0.tar.gz", hash = "sha256:377c31d8082173663b230dad341614b127b2460fe24d5fd72ed456fb3f0b3a9e"},
+    {file = "gradio_client-1.11.1-py3-none-any.whl", hash = "sha256:eb7870c2eb0c18f22613f0635a50ca805fdf6e8ddeb71d9f06b398b876372487"},
+    {file = "gradio_client-1.11.1.tar.gz", hash = "sha256:0d4885fea23b0d5ff8f4c34824839e0aa7fd1ba4f120928a7fc3a6ebde42abab"},
 ]
 
 [package.dependencies]
@@ -5968,4 +5968,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "9ccc9c81458fe02a6ebb89326f478ccd2944a6344ec4e834500a33b06b529811"
+content-hash = "935192124feff822a650d50acdbf254b7a786c132922156d8ed34a84266e469a"
