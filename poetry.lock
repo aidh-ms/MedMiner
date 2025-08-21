@@ -4858,15 +4858,15 @@ files = [
 
 [[package]]
 name = "smolagents"
-version = "1.21.1"
+version = "1.21.2"
 description = "🤗 smolagents: a barebones library for agents. Agents write python code to call tools or orchestrate other agents."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 markers = "platform_python_implementation == \"PyPy\""
 files = [
-    {file = "smolagents-1.21.1-py3-none-any.whl", hash = "sha256:9490bc16a1efd326132daef4add6c09099aa5d652777332239f62d3b75f55761"},
-    {file = "smolagents-1.21.1.tar.gz", hash = "sha256:bd8a26868cb294949aa8ced954f90f1f1ece96f417fc60c6be1ac6d2f762f130"},
+    {file = "smolagents-1.21.2-py3-none-any.whl", hash = "sha256:7e15846379c19468e68a648dac708b9acf735e34c0bda1e832ed093cec42dc70"},
+    {file = "smolagents-1.21.2.tar.gz", hash = "sha256:cb1727dd5081bc8137fd329567eb8ce10321a058c96ddbe5e0dd7c2e6a6c9fa4"},
 ]
 
 [package.dependencies]
@@ -4895,7 +4895,7 @@ mcp = ["mcp", "mcpadapt (>=0.1.11)"]
 mlx-lm = ["mlx-lm"]
 openai = ["openai (>=1.58.1)"]
 quality = ["ruff (>=0.9.0)"]
-telemetry = ["arize-phoenix", "openinference-instrumentation-smolagents (>=0.1.4)", "opentelemetry-exporter-otlp", "opentelemetry-sdk"]
+telemetry = ["arize-phoenix", "openinference-instrumentation-smolagents (>=0.1.15)", "opentelemetry-exporter-otlp", "opentelemetry-sdk"]
 test = ["Wikipedia-API (>=0.8.1)", "ipython (>=8.31.0)", "mlx[cpu]", "pandas (>=2.2.3)", "pytest (>=8.1.0)", "pytest-datadir", "pytest-timeout", "python-dotenv (>=1.0.1)", "rank-bm25", "smolagents[all]"]
 toolkit = ["ddgs (>=9.0.0)", "markdownify (>=0.14.1)"]
 torch = ["numpy (>=1.21.2)", "torch", "torchvision"]
@@ -5970,4 +5970,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "9d0d8cd3b0e55b71fff098f453dd8fc14d49d953b98b7592149525402ccb8814"
+content-hash = "b2814c99067601c4e2fe6a0272ea5094c3702920d5ca0b2a3e87640b0410ac69"
