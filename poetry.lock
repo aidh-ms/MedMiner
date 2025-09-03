@@ -4858,15 +4858,15 @@ files = [
 
 [[package]]
 name = "smolagents"
-version = "1.21.2"
+version = "1.21.3"
 description = "🤗 smolagents: a barebones library for agents. Agents write python code to call tools or orchestrate other agents."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 markers = "platform_python_implementation == \"PyPy\""
 files = [
-    {file = "smolagents-1.21.2-py3-none-any.whl", hash = "sha256:7e15846379c19468e68a648dac708b9acf735e34c0bda1e832ed093cec42dc70"},
-    {file = "smolagents-1.21.2.tar.gz", hash = "sha256:cb1727dd5081bc8137fd329567eb8ce10321a058c96ddbe5e0dd7c2e6a6c9fa4"},
+    {file = "smolagents-1.21.3-py3-none-any.whl", hash = "sha256:60692ee2bcfd4893929cc68add795887231e37f06ff2854c8e20b2daee09f32b"},
+    {file = "smolagents-1.21.3.tar.gz", hash = "sha256:cfebebbb2d21df3fe79c64ee6f5057ec2a96adac3c121a4afc94069a76fd262e"},
 ]
 
 [package.dependencies]
@@ -4888,7 +4888,7 @@ audio = ["smolagents[torch]", "soundfile"]
 bedrock = ["boto3 (>=1.36.18)"]
 dev = ["smolagents[quality,test]", "sqlalchemy"]
 docker = ["docker (>=7.1.0)", "websocket-client"]
-e2b = ["e2b-code-interpreter (>=1.0.3)", "python-dotenv (>=1.0.1)"]
+e2b = ["e2b-code-interpreter (>=1.0.3,<2)", "python-dotenv (>=1.0.1)"]
 gradio = ["gradio (>=5.14.0)"]
 litellm = ["litellm (>=1.60.2)"]
 mcp = ["mcp", "mcpadapt (>=0.1.11)"]
@@ -5970,4 +5970,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "feaf77ba82e5dfa76bfd5c533b5af66d56954cabd2383c94a3d89dadbafb26a3"
+content-hash = "776fadd1a0030ff52f646cbecb56b9fd20decb109f1bb7a3932b9f8b232d0d90"
