@@ -34,7 +34,7 @@ openai = "^1.106.1"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.17.1"
-pytest = "^8.4.1"
+pytest = "^8.4.2"
 coverage = "^7.10.6"
 pytest-cov = "^6.2.1"
 ruff = "^0.12.11"
