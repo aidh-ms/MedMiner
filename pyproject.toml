@@ -33,6 +33,7 @@ pre-commit = "^4.3.0"
 openai = "^1.108.1"
 
 [tool.poetry.group.dev.dependencies]
+openpyxl = "^3.1.5"
 mypy = "^1.18.2"
 pytest = "^8.4.2"
 coverage = "^7.10.6"
