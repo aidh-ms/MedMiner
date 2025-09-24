@@ -1060,14 +1060,14 @@ dev = ["flake8", "markdown", "twine", "wheel"]
 
 [[package]]
 name = "gradio"
-version = "5.46.0"
+version = "5.47.0"
 description = "Python library for easily interacting with trained machine learning models"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "gradio-5.46.0-py3-none-any.whl", hash = "sha256:e088fd68a3a04365caf3c7d6846c6e1fff1aca3b4e5b49ec5003f18bdbe343d5"},
-    {file = "gradio-5.46.0.tar.gz", hash = "sha256:04ffe0bf79e81d63c16560fb483db06d39d96f2f36b7a672fa595dd6ddc69784"},
+    {file = "gradio-5.47.0-py3-none-any.whl", hash = "sha256:4132717feae4c0e924dbb07efbbf06206a1a28918e800ba5f0e46fc1f1e88395"},
+    {file = "gradio-5.47.0.tar.gz", hash = "sha256:b2acc27cd64cce82d4553e9be2a36361fc232744494f589585a004484b953d37"},
 ]
 
 [package.dependencies]
@@ -1077,7 +1077,7 @@ audioop-lts = {version = "<1.0", markers = "python_version >= \"3.13\""}
 brotli = ">=1.1.0"
 fastapi = ">=0.115.2,<1.0"
 ffmpy = "*"
-gradio-client = "1.13.0"
+gradio-client = "1.13.2"
 groovy = ">=0.1,<1.0"
 httpx = ">=0.24.1,<1.0"
 huggingface-hub = ">=0.33.5,<1.0"
@@ -1107,14 +1107,14 @@ oauth = ["authlib", "itsdangerous"]
 
 [[package]]
 name = "gradio-client"
-version = "1.13.0"
+version = "1.13.2"
 description = "Python library for easily interacting with trained machine learning models"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "gradio_client-1.13.0-py3-none-any.whl", hash = "sha256:4489ebd07ae40c6cc7a6a02cf60a53e9e3345aa5342a3814c356775bbad64bbc"},
-    {file = "gradio_client-1.13.0.tar.gz", hash = "sha256:07de7e8e58553335d56e0c7db6af60f1205fd1f167bf07f3e0f587888695a8f3"},
+    {file = "gradio_client-1.13.2-py3-none-any.whl", hash = "sha256:4fe7dfef16849304dbe007aeaca694b36f16159eb6891fea139c99fce9a911f4"},
+    {file = "gradio_client-1.13.2.tar.gz", hash = "sha256:f97e1c8e9937a502b8bdd105707edff4b3db47989a86a386b3d3846bc8c559a8"},
 ]
 
 [package.dependencies]
@@ -1123,7 +1123,7 @@ httpx = ">=0.24.1"
 huggingface-hub = ">=0.19.3"
 packaging = "*"
 typing-extensions = ">=4.0,<5.0"
-websockets = ">=10.0,<16.0"
+websockets = ">=13.0,<16.0"
 
 [[package]]
 name = "griffe"
@@ -5777,4 +5777,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "e27e6708f70b3f62efaf7c4d0282315266ada30ca0d84be8266ee446e8dce682"
+content-hash = "02e437d4bf0890bccbce946a79a1b5d6dac4509330214a52a759b5242d2f54e4"
