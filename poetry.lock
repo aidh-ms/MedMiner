@@ -1076,14 +1076,14 @@ dev = ["flake8", "markdown", "twine", "wheel"]
 
 [[package]]
 name = "gradio"
-version = "5.47.0"
+version = "5.47.2"
 description = "Python library for easily interacting with trained machine learning models"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "gradio-5.47.0-py3-none-any.whl", hash = "sha256:4132717feae4c0e924dbb07efbbf06206a1a28918e800ba5f0e46fc1f1e88395"},
-    {file = "gradio-5.47.0.tar.gz", hash = "sha256:b2acc27cd64cce82d4553e9be2a36361fc232744494f589585a004484b953d37"},
+    {file = "gradio-5.47.2-py3-none-any.whl", hash = "sha256:e5cdf106b27bdb321284f327537682f3060ef0c62d9c70236eeaa8b1917a6803"},
+    {file = "gradio-5.47.2.tar.gz", hash = "sha256:2e1cc00421da159ed9e9e2c8760e792ca2d8fa9bc610f3da0ec5cfa3fa6ca0be"},
 ]
 
 [package.dependencies]
@@ -1093,10 +1093,10 @@ audioop-lts = {version = "<1.0", markers = "python_version >= \"3.13\""}
 brotli = ">=1.1.0"
 fastapi = ">=0.115.2,<1.0"
 ffmpy = "*"
-gradio-client = "1.13.2"
+gradio-client = "1.13.3"
 groovy = ">=0.1,<1.0"
 httpx = ">=0.24.1,<1.0"
-huggingface-hub = ">=0.33.5,<1.0"
+huggingface-hub = ">=0.33.5,<2.0"
 jinja2 = "<4.0"
 markupsafe = ">=2.0,<4.0"
 numpy = ">=1.0,<3.0"
@@ -1123,20 +1123,20 @@ oauth = ["authlib", "itsdangerous"]
 
 [[package]]
 name = "gradio-client"
-version = "1.13.2"
+version = "1.13.3"
 description = "Python library for easily interacting with trained machine learning models"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "gradio_client-1.13.2-py3-none-any.whl", hash = "sha256:4fe7dfef16849304dbe007aeaca694b36f16159eb6891fea139c99fce9a911f4"},
-    {file = "gradio_client-1.13.2.tar.gz", hash = "sha256:f97e1c8e9937a502b8bdd105707edff4b3db47989a86a386b3d3846bc8c559a8"},
+    {file = "gradio_client-1.13.3-py3-none-any.whl", hash = "sha256:3f63e4d33a2899c1a12b10fe3cf77b82a6919ff1a1fb6391f6aa225811aa390c"},
+    {file = "gradio_client-1.13.3.tar.gz", hash = "sha256:869b3e67e0f7a0f40df8c48c94de99183265cf4b7b1d9bd4623e336d219ffbe7"},
 ]
 
 [package.dependencies]
 fsspec = "*"
 httpx = ">=0.24.1"
-huggingface-hub = ">=0.19.3"
+huggingface-hub = ">=0.19.3,<2.0"
 packaging = "*"
 typing-extensions = ">=4.0,<5.0"
 websockets = ">=13.0,<16.0"
@@ -5795,4 +5795,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "c93c4b718eda1bd0a1df9e9f13f420bf6e0fc5e11f9b6605a364167ca28d6e56"
+content-hash = "702f49b3cdbadc863900cea2d3eb369b528c33494eb11f520114180718400a12"
