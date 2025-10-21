@@ -57,9 +57,7 @@ class MedicationTask(Task):
                 "frequency": "1-0-1-0",
                 "frequency_code": "BID",
                 "rxcui": "",
-                "atc_id": "",
-                "atc_name": "",
-                "atc_type": ""
+                "atc_code": "",
             }
         ]
         Example 2:
@@ -77,9 +75,7 @@ class MedicationTask(Task):
                 "frequency": "1-0-0-0",
                 "frequency_code": "AM",
                 "rxcui": "",
-                "atc_id": "",
-                "atc_name": "",
-                "atc_type": ""
+                "atc_code": "",
             }
         ]
         Example 3:
@@ -97,9 +93,7 @@ class MedicationTask(Task):
                 "frequency": "1-1-0-0",
                 "frequency_code": "BID",
                 "rxcui": "",
-                "atc_id": "",
-                "atc_name": "",
-                "atc_type": ""
+                "atc_code": ""
             }
         ]
         Example 4:
@@ -117,9 +111,7 @@ class MedicationTask(Task):
                 "frequency": "1-0-1-0",
                 "frequency_code": "BID",
                 "rxcui": "",
-                "atc_id": "",
-                "atc_name": "",
-                "atc_type": ""
+                "atc_code": "",
             },
             {
                 "patient_id": 4,
@@ -133,9 +125,7 @@ class MedicationTask(Task):
                 "frequency": "1-0-1-0",
                 "frequency_code": "BID",
                 "rxcui": "",
-                "atc_id": "",
-                "atc_name": "",
-                "atc_type": ""
+                "atc_code": "",
             }
         ]
         Example 5:
@@ -153,9 +143,7 @@ class MedicationTask(Task):
                 "frequency": "",
                 "frequency_code": "NaF",
                 "rxcui": "",
-                "atc_id": "",
-                "atc_name": "",
-                "atc_type": ""
+                "atc_code": "",
             }
         ]
         Example 6:
@@ -173,9 +161,7 @@ class MedicationTask(Task):
                 "frequency": "",
                 "frequency_code": "NaF",
                 "rxcui": "",
-                "atc_id": "",
-                "atc_name": "",
-                "atc_type": ""
+                "atc_code": "",
             }
         ]
         ---
@@ -192,9 +178,7 @@ class MedicationTask(Task):
         - frequency: The raw frequency text of the medication. if not applicable, write an empty string.
         - frequency_code: The frequency code of the medication. if not applicable, write an empty string.
         - rxcui: The RXCUI of the medication. if not applicable, write an empty string.
-        - atc_id: The ATC code of the medication. if not applicable, write an empty string.
-        - atc_name: The name of the ATC code. if not applicable, write an empty string.
-        - atc_type: The type of the ATC code. if not applicable, write an empty string.
+        - atc_code: The ATC codes of the medication. if not applicable, write an empty string.
         """
     )
     tools = [CSVTool, extract_medication_data, get_rxcui, get_atc]
