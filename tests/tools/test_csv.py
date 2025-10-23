@@ -1,6 +1,8 @@
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
+import pandas as pd
+
 from medminer.tools.csv import CSVTool
 
 
@@ -20,9 +22,7 @@ def test_test_csv_tool() -> None:
         _ = tool.forward(task_name="medication", data=data)
 
         expected_path = Path(temp_dir) / "test_session" / "medication.csv"
-
         assert Path(expected_path).exists()
 
-        with open(expected_path, "r") as f:
-            content = f.read()
-            assert content == "patient_id,medication_name\n1,Aspirin\n2,Paracetamol\n"
+        df = pd.read_csv(expected_path)
+        assert df.equals(pd.DataFrame(data))
