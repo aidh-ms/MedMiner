@@ -6,5 +6,5 @@ def test_document_content() -> None:
         patient_id="12345",
         text="This is a sample medical document.\nIt contains multiple lines.",
     )
-    expected_content = "Patient: 12345\n" "This is a sample medical document.\n" "It contains multiple lines.\n"
+    expected_content = "Patient: 12345\nThis is a sample medical document.\nIt contains multiple lines.\n"
     assert doc.content == expected_content
