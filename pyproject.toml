@@ -81,4 +81,5 @@ addopts = [
     "--cov-report=xml",
     "--import-mode=importlib",
     "--random-order",
+    "--record-mode=once",
 ]
