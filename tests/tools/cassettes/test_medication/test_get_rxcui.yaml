@@ -1,0 +1,190 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      host:
+      - rxnav.nlm.nih.gov
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://rxnav.nlm.nih.gov/REST/rxcui.json?name=aspirin
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEA6tWykxxL8ovLVCyqlYqqsjLL8r1TFGyilYyNLQ0VIqtrQUAj6jHOCEAAAA=
+    headers:
+      Access-Control-Allow-Headers:
+      - '*'
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - public, max-age=300, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''unsafe-eval'' ''strict-dynamic''
+        https: http:;'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 23 Oct 2025 17:43:00 GMT
+      ETag:
+      - W/"20AA_250902F;1756304389;3.1.336"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept
+      X-Cache-Status:
+      - MISS
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      host:
+      - rxnav.nlm.nih.gov
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://rxnav.nlm.nih.gov/REST/rxcui.json?name=paracetaml
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEA6tWykxxL8ovLVCyqq6tBQAI4qQkDgAAAA==
+    headers:
+      Access-Control-Allow-Headers:
+      - '*'
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - public, max-age=300, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''unsafe-eval'' ''strict-dynamic''
+        https: http:;'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 23 Oct 2025 17:43:01 GMT
+      ETag:
+      - W/"20AA_250902F;1756304389;3.1.336"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept
+      X-Cache-Status:
+      - MISS
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      host:
+      - rxnav.nlm.nih.gov
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://rxnav.nlm.nih.gov/REST/approximateTerm.json?term=paracetaml+%28acetaminophen%29
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEA61TUWuDMBj8KyPPZSRfEpP45mbXjU1bbDsGYw/BCpNpFKdQKP3vM20tc6ydgz4m
+        Xu7z7rvbIF2WVbFOc10nk6poSuRuUGrKpl4kVY5c02TZCMXarNJVC0Hu6wZV67hJkYuIQ9CoPen9
+        CYPEQvH26jMuqhaK1LVDieRKCEW5UDu0Nh/2aYsyOrcgL05qnaemKN8TYx8XTRXbD8v5DG1Hp8dR
+        cDiWg8cdeSfzc7QAHDPAg2kPKvQpFdFLOI2CcxMlBSqHDzzqCIL501+8ig4WMpQXsCM4G+57t+bb
+        8cILHsLp7H4cfl/zsxf6dz0dAguBbY66aLWLlliyi0thwCkF8X/e0P/xy/0qSCrF/uYyTfCj5eTG
+        Cx97LhHCQTK7384mAqCoIv0GMmCScsAcC0lg5+qhgjZyv6X3apZmmfWkK2IX4bft9gvDJPbNMAQA
+        AA==
+    headers:
+      Access-Control-Allow-Headers:
+      - '*'
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store, no-cache
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''unsafe-eval'' ''strict-dynamic''
+        https: http:;'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 23 Oct 2025 17:43:01 GMT
+      ETag:
+      - W/"20AA_250902F;1756304389;3.1.336"
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Authorization,Accept
+      X-Cache-Status:
+      - MISS
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

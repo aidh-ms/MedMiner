@@ -1,0 +1,451 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      host:
+      - snowstorm:8080
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: http://snowstorm:8080/MAIN/concepts?activeFilter=true&termActive=true&ecl=%3C+71388002%7CProcedure%7C+%7B%7B+term+%3D+%22Cranial+Computed+Tomography%22%7D%7D
+  response:
+    body:
+      string: "{\n  \"items\" : [ ],\n  \"total\" : 0,\n  \"limit\" : 50,\n  \"offset\"
+        : 0\n}"
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 24 Oct 2025 15:49:44 GMT
+      Expires:
+      - '0'
+      Keep-Alive:
+      - timeout=60
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-XSS-Protection:
+      - '0'
+    status:
+      code: 200
+      message: ''
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, br
+      connection:
+      - keep-alive
+      host:
+      - snowstorm:8080
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: http://snowstorm:8080/MAIN/concepts?activeFilter=true&termActive=true&ecl=%3C+71388002%7CProcedure%7C+%7B%7B+term+%3D+%28%22Cranial%22+%22Head%22%29%2C+term+%3D+%22Computed%22%2C+term+%3D+%22Tomography%22+%7D%7D
+  response:
+    body:
+      string: "{\n  \"items\" : [ {\n    \"conceptId\" : \"582101000119108\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20170131\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography angiography of head with contrast
+        (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT angiography of head with contrast\",\n      \"lang\" : \"en\"\n    },\n
+        \   \"id\" : \"582101000119108\",\n    \"idAndFsnTerm\" : \"582101000119108
+        | Computed tomography angiography of head with contrast (procedure) |\"\n
+        \ }, {\n    \"conceptId\" : \"383371000119108\",\n    \"active\" : true,\n
+        \   \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n
+        \   \"effectiveTime\" : \"20170131\",\n    \"fsn\" : {\n      \"term\" : \"Computed
+        tomography of head without contrast (procedure)\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"pt\" : {\n      \"term\" : \"CT of head without contrast\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"id\" : \"383371000119108\",\n    \"idAndFsnTerm\"
+        : \"383371000119108 | Computed tomography of head without contrast (procedure)
+        |\"\n  }, {\n    \"conceptId\" : \"10361000087104\",\n    \"active\" : true,\n
+        \   \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n
+        \   \"effectiveTime\" : \"20190131\",\n    \"fsn\" : {\n      \"term\" : \"Computed
+        tomography of head and cervical spine (procedure)\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"pt\" : {\n      \"term\" : \"CT of head and cervical spine\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"id\" : \"10361000087104\",\n    \"idAndFsnTerm\"
+        : \"10361000087104 | Computed tomography of head and cervical spine (procedure)
+        |\"\n  }, {\n    \"conceptId\" : \"1343333005\",\n    \"active\" : true,\n
+        \   \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n
+        \   \"effectiveTime\" : \"20240801\",\n    \"fsn\" : {\n      \"term\" : \"Computed
+        tomography of fistula of head with contrast (procedure)\",\n      \"lang\"
+        : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of fistula of head
+        with contrast\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"1343333005\",\n
+        \   \"idAndFsnTerm\" : \"1343333005 | Computed tomography of fistula of head
+        with contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"1196925007\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20220228\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, neck and thorax with
+        contrast (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n
+        \     \"term\" : \"CT of head, neck and thorax with contrast\",\n      \"lang\"
+        : \"en\"\n    },\n    \"id\" : \"1196925007\",\n    \"idAndFsnTerm\" : \"1196925007
+        | Computed tomography of head, neck and thorax with contrast (procedure) |\"\n
+        \ }, {\n    \"conceptId\" : \"1196924006\",\n    \"active\" : true,\n    \"definitionStatus\"
+        : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\"
+        : \"20220228\",\n    \"fsn\" : {\n      \"term\" : \"Computed tomography of
+        head, neck and thorax (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\"
+        : {\n      \"term\" : \"CT of head, neck and thorax\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"id\" : \"1196924006\",\n    \"idAndFsnTerm\" : \"1196924006
+        | Computed tomography of head, neck and thorax (procedure) |\"\n  }, {\n    \"conceptId\"
+        : \"772223003\",\n    \"active\" : true,\n    \"definitionStatus\" : \"PRIMITIVE\",\n
+        \   \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\" : \"20190131\",\n
+        \   \"fsn\" : {\n      \"term\" : \"Mobile intraoperative three-dimensional
+        computed tomography of head (procedure)\",\n      \"lang\" : \"en\"\n    },\n
+        \   \"pt\" : {\n      \"term\" : \"Mobile intraoperative 3D (three-dimensional)
+        CT of head\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"772223003\",\n
+        \   \"idAndFsnTerm\" : \"772223003 | Mobile intraoperative three-dimensional
+        computed tomography of head (procedure) |\"\n  }, {\n    \"conceptId\" : \"719898006\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20170131\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, neck, abdomen and pelvis
+        with contrast (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\"
+        : {\n      \"term\" : \"CT of head, neck, abdomen and pelvis with contrast\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"id\" : \"719898006\",\n    \"idAndFsnTerm\"
+        : \"719898006 | Computed tomography of head, neck, abdomen and pelvis with
+        contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"718004009\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20160731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Cone beam computed tomography of head (procedure)\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"Cone beam
+        CT of head\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"718004009\",\n
+        \   \"idAndFsnTerm\" : \"718004009 | Cone beam computed tomography of head
+        (procedure) |\"\n  }, {\n    \"conceptId\" : \"717993007\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20160731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Biopsy of head using cone beam computed tomography
+        guidance (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n
+        \     \"term\" : \"Cone beam CT guided biopsy of head\",\n      \"lang\" :
+        \"en\"\n    },\n    \"id\" : \"717993007\",\n    \"idAndFsnTerm\" : \"717993007
+        | Biopsy of head using cone beam computed tomography guidance (procedure)
+        |\"\n  }, {\n    \"conceptId\" : \"717689003\",\n    \"active\" : true,\n
+        \   \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n
+        \   \"effectiveTime\" : \"20160731\",\n    \"fsn\" : {\n      \"term\" : \"Insertion
+        of drain into head using cone beam computed tomography guidance (procedure)\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"Cone beam
+        CT guided insertion of drain into head\",\n      \"lang\" : \"en\"\n    },\n
+        \   \"id\" : \"717689003\",\n    \"idAndFsnTerm\" : \"717689003 | Insertion
+        of drain into head using cone beam computed tomography guidance (procedure)
+        |\"\n  }, {\n    \"conceptId\" : \"717347003\",\n    \"active\" : true,\n
+        \   \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n
+        \   \"effectiveTime\" : \"20160731\",\n    \"fsn\" : {\n      \"term\" : \"Aspiration
+        of head using cone beam computed tomography guidance (procedure)\",\n      \"lang\"
+        : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"Cone beam CT guided aspiration
+        of head\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"717347003\",\n
+        \   \"idAndFsnTerm\" : \"717347003 | Aspiration of head using cone beam computed
+        tomography guidance (procedure) |\"\n  }, {\n    \"conceptId\" : \"715692000\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20160731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head with contrast for radiotherapy
+        planning (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n
+        \     \"term\" : \"CT of head with contrast for radiotherapy planning\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"id\" : \"715692000\",\n    \"idAndFsnTerm\"
+        : \"715692000 | Computed tomography of head with contrast for radiotherapy
+        planning (procedure) |\"\n  }, {\n    \"conceptId\" : \"715588003\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20160731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, neck, abdomen and pelvis
+        (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT of head, neck, abdomen and pelvis\",\n      \"lang\" : \"en\"\n    },\n
+        \   \"id\" : \"715588003\",\n    \"idAndFsnTerm\" : \"715588003 | Computed
+        tomography of head, neck, abdomen and pelvis (procedure) |\"\n  }, {\n    \"conceptId\"
+        : \"715289005\",\n    \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n
+        \   \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\" : \"20160731\",\n
+        \   \"fsn\" : {\n      \"term\" : \"Computed tomography of head and neck with
+        contrast for radiotherapy planning (procedure)\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"pt\" : {\n      \"term\" : \"CT of head and neck with contrast
+        for radiotherapy planning\",\n      \"lang\" : \"en\"\n    },\n    \"id\"
+        : \"715289005\",\n    \"idAndFsnTerm\" : \"715289005 | Computed tomography
+        of head and neck with contrast for radiotherapy planning (procedure) |\"\n
+        \ }, {\n    \"conceptId\" : \"715245005\",\n    \"active\" : true,\n    \"definitionStatus\"
+        : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\"
+        : \"20160731\",\n    \"fsn\" : {\n      \"term\" : \"Computed tomography of
+        head and neck for radiotherapy planning (procedure)\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"pt\" : {\n      \"term\" : \"CT of head and neck for radiotherapy
+        planning\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"715245005\",\n
+        \   \"idAndFsnTerm\" : \"715245005 | Computed tomography of head and neck
+        for radiotherapy planning (procedure) |\"\n  }, {\n    \"conceptId\" : \"712855008\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20160131\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, cervical and thoracic
+        spine (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT of head, cervical and thoracic spine\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"id\" : \"712855008\",\n    \"idAndFsnTerm\" : \"712855008 |
+        Computed tomography of head, cervical and thoracic spine (procedure) |\"\n
+        \ }, {\n    \"conceptId\" : \"712727001\",\n    \"active\" : true,\n    \"definitionStatus\"
+        : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\"
+        : \"20160131\",\n    \"fsn\" : {\n      \"term\" : \"Computed tomography of
+        head and cervical spine with contrast (procedure)\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"pt\" : {\n      \"term\" : \"CT of head and cervical spine with
+        contrast\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"712727001\",\n
+        \   \"idAndFsnTerm\" : \"712727001 | Computed tomography of head and cervical
+        spine with contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"711278009\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20150731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, neck, thorax and abdomen
+        (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT of head, neck, thorax and abdomen\",\n      \"lang\" : \"en\"\n    },\n
+        \   \"id\" : \"711278009\",\n    \"idAndFsnTerm\" : \"711278009 | Computed
+        tomography of head, neck, thorax and abdomen (procedure) |\"\n  }, {\n    \"conceptId\"
+        : \"711232001\",\n    \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n
+        \   \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\" : \"20150731\",\n
+        \   \"fsn\" : {\n      \"term\" : \"Computed tomography of head with contrast
+        (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT of head with contrast\",\n      \"lang\" : \"en\"\n    },\n    \"id\"
+        : \"711232001\",\n    \"idAndFsnTerm\" : \"711232001 | Computed tomography
+        of head with contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"710073000\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20150731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography angiography of head, neck and
+        thorax with contrast (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\"
+        : {\n      \"term\" : \"CT angiography of head, neck and thorax with contrast\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"id\" : \"710073000\",\n    \"idAndFsnTerm\"
+        : \"710073000 | Computed tomography angiography of head, neck and thorax with
+        contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"702765004\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20140731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head and sella turcica with
+        contrast (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n
+        \     \"term\" : \"CT of head and sella turcica with contrast\",\n      \"lang\"
+        : \"en\"\n    },\n    \"id\" : \"702765004\",\n    \"idAndFsnTerm\" : \"702765004
+        | Computed tomography of head and sella turcica with contrast (procedure)
+        |\"\n  }, {\n    \"conceptId\" : \"702761008\",\n    \"active\" : true,\n
+        \   \"definitionStatus\" : \"PRIMITIVE\",\n    \"moduleId\" : \"900000000000207008\",\n
+        \   \"effectiveTime\" : \"20140731\",\n    \"fsn\" : {\n      \"term\" : \"Computed
+        tomography of head and sella turcica (procedure)\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"pt\" : {\n      \"term\" : \"CT of head and sella turcica\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"id\" : \"702761008\",\n    \"idAndFsnTerm\"
+        : \"702761008 | Computed tomography of head and sella turcica (procedure)
+        |\"\n  }, {\n    \"conceptId\" : \"702520005\",\n    \"active\" : true,\n
+        \   \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n
+        \   \"effectiveTime\" : \"20140731\",\n    \"fsn\" : {\n      \"term\" : \"Computed
+        tomography of head and facial bones with contrast (procedure)\",\n      \"lang\"
+        : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of head and facial
+        bones with contrast\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"702520005\",\n
+        \   \"idAndFsnTerm\" : \"702520005 | Computed tomography of head and facial
+        bones with contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"702519004\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"PRIMITIVE\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20140731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head and facial bones (procedure)\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of
+        head and facial bones\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"702519004\",\n
+        \   \"idAndFsnTerm\" : \"702519004 | Computed tomography of head and facial
+        bones (procedure) |\"\n  }, {\n    \"conceptId\" : \"702484000\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20140731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Biopsy of head using computed tomography guidance
+        (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT guided biopsy of head\",\n      \"lang\" : \"en\"\n    },\n    \"id\"
+        : \"702484000\",\n    \"idAndFsnTerm\" : \"702484000 | Biopsy of head using
+        computed tomography guidance (procedure) |\"\n  }, {\n    \"conceptId\" :
+        \"702430003\",\n    \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n
+        \   \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\" : \"20140731\",\n
+        \   \"fsn\" : {\n      \"term\" : \"Computed tomography angiography of head
+        and neck with contrast (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\"
+        : {\n      \"term\" : \"CT angiography of head and neck with contrast\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"id\" : \"702430003\",\n    \"idAndFsnTerm\"
+        : \"702430003 | Computed tomography angiography of head and neck with contrast
+        (procedure) |\"\n  }, {\n    \"conceptId\" : \"448760006\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20110731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head and neck and thorax and
+        abdomen with contrast (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\"
+        : {\n      \"term\" : \"CT of head and neck and thorax and abdomen with contrast\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"id\" : \"448760006\",\n    \"idAndFsnTerm\"
+        : \"448760006 | Computed tomography of head and neck and thorax and abdomen
+        with contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"448335009\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20110731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head and neck with contrast
+        (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT of head and neck with contrast\",\n      \"lang\" : \"en\"\n    },\n
+        \   \"id\" : \"448335009\",\n    \"idAndFsnTerm\" : \"448335009 | Computed
+        tomography of head and neck with contrast (procedure) |\"\n  }, {\n    \"conceptId\"
+        : \"445583005\",\n    \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n
+        \   \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\" : \"20100731\",\n
+        \   \"fsn\" : {\n      \"term\" : \"Computed tomography of head, thorax, abdomen
+        and pelvis (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n
+        \     \"term\" : \"CT of head, thorax, abdomen and pelvis\",\n      \"lang\"
+        : \"en\"\n    },\n    \"id\" : \"445583005\",\n    \"idAndFsnTerm\" : \"445583005
+        | Computed tomography of head, thorax, abdomen and pelvis (procedure) |\"\n
+        \ }, {\n    \"conceptId\" : \"444758004\",\n    \"active\" : true,\n    \"definitionStatus\"
+        : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\"
+        : \"20100731\",\n    \"fsn\" : {\n      \"term\" : \"Computed tomography of
+        head, thorax and abdomen with contrast (procedure)\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"pt\" : {\n      \"term\" : \"CT of head, thorax and abdomen
+        with contrast\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"444758004\",\n
+        \   \"idAndFsnTerm\" : \"444758004 | Computed tomography of head, thorax and
+        abdomen with contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"444709003\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20100731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head and thorax with contrast
+        (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT of head and thorax with contrast\",\n      \"lang\" : \"en\"\n    },\n
+        \   \"id\" : \"444709003\",\n    \"idAndFsnTerm\" : \"444709003 | Computed
+        tomography of head and thorax with contrast (procedure) |\"\n  }, {\n    \"conceptId\"
+        : \"444708006\",\n    \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n
+        \   \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\" : \"20100731\",\n
+        \   \"fsn\" : {\n      \"term\" : \"Computed tomography of head and thorax
+        (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT of head and thorax\",\n      \"lang\" : \"en\"\n    },\n    \"id\"
+        : \"444708006\",\n    \"idAndFsnTerm\" : \"444708006 | Computed tomography
+        of head and thorax (procedure) |\"\n  }, {\n    \"conceptId\" : \"444674001\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20100731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, thorax, abdomen and pelvis
+        with contrast (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\"
+        : {\n      \"term\" : \"CT of head, thorax, abdomen and pelvis with contrast\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"id\" : \"444674001\",\n    \"idAndFsnTerm\"
+        : \"444674001 | Computed tomography of head, thorax, abdomen and pelvis with
+        contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"444633001\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20100731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, thorax and abdomen (procedure)\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of
+        head, thorax and abdomen\",\n      \"lang\" : \"en\"\n    },\n    \"id\" :
+        \"444633001\",\n    \"idAndFsnTerm\" : \"444633001 | Computed tomography of
+        head, thorax and abdomen (procedure) |\"\n  }, {\n    \"conceptId\" : \"444630003\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20100731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, neck, thorax, abdomen
+        and pelvis with contrast (procedure)\",\n      \"lang\" : \"en\"\n    },\n
+        \   \"pt\" : {\n      \"term\" : \"Computed tomography of head, neck, thorax,
+        abdomen and pelvis with contrast\",\n      \"lang\" : \"en\"\n    },\n    \"id\"
+        : \"444630003\",\n    \"idAndFsnTerm\" : \"444630003 | Computed tomography
+        of head, neck, thorax, abdomen and pelvis with contrast (procedure) |\"\n
+        \ }, {\n    \"conceptId\" : \"444628000\",\n    \"active\" : true,\n    \"definitionStatus\"
+        : \"FULLY_DEFINED\",\n    \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\"
+        : \"20100731\",\n    \"fsn\" : {\n      \"term\" : \"Computed tomography of
+        head, abdomen and pelvis with contrast (procedure)\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"pt\" : {\n      \"term\" : \"CT of head, abdomen and pelvis
+        with contrast\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"444628000\",\n
+        \   \"idAndFsnTerm\" : \"444628000 | Computed tomography of head, abdomen
+        and pelvis with contrast (procedure) |\"\n  }, {\n    \"conceptId\" : \"444618009\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20100731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, abdomen and pelvis (procedure)\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of
+        head, abdomen and pelvis\",\n      \"lang\" : \"en\"\n    },\n    \"id\" :
+        \"444618009\",\n    \"idAndFsnTerm\" : \"444618009 | Computed tomography of
+        head, abdomen and pelvis (procedure) |\"\n  }, {\n    \"conceptId\" : \"443365001\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20100131\",\n    \"fsn\"
+        : {\n      \"term\" : \"Single photon emission computed tomography with computed
+        tomography of bone of head and neck (procedure)\",\n      \"lang\" : \"en\"\n
+        \   },\n    \"pt\" : {\n      \"term\" : \"Single photon emission computed
+        tomography with computed tomography of bone of head and neck\",\n      \"lang\"
+        : \"en\"\n    },\n    \"id\" : \"443365001\",\n    \"idAndFsnTerm\" : \"443365001
+        | Single photon emission computed tomography with computed tomography of bone
+        of head and neck (procedure) |\"\n  }, {\n    \"conceptId\" : \"440331001\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20090131\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head, neck, thorax, abdomen
+        and pelvis (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n
+        \     \"term\" : \"CT of head, neck, thorax, abdomen and pelvis\",\n      \"lang\"
+        : \"en\"\n    },\n    \"id\" : \"440331001\",\n    \"idAndFsnTerm\" : \"440331001
+        | Computed tomography of head, neck, thorax, abdomen and pelvis (procedure)
+        |\"\n  }, {\n    \"conceptId\" : \"432904000\",\n    \"active\" : true,\n
+        \   \"definitionStatus\" : \"PRIMITIVE\",\n    \"moduleId\" : \"900000000000207008\",\n
+        \   \"effectiveTime\" : \"20080731\",\n    \"fsn\" : {\n      \"term\" : \"Computed
+        tomography of head for cranioplasty planning (procedure)\",\n      \"lang\"
+        : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of head for cranioplasty
+        planning\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"432904000\",\n
+        \   \"idAndFsnTerm\" : \"432904000 | Computed tomography of head for cranioplasty
+        planning (procedure) |\"\n  }, {\n    \"conceptId\" : \"431837001\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20080731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Single photon emission computed tomography of bone
+        of head and neck (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\"
+        : {\n      \"term\" : \"Single photon emission computed tomography of bone
+        of head and neck\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"431837001\",\n
+        \   \"idAndFsnTerm\" : \"431837001 | Single photon emission computed tomography
+        of bone of head and neck (procedure) |\"\n  }, {\n    \"conceptId\" : \"429867000\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20080731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head for radiotherapy planning
+        (procedure)\",\n      \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\"
+        : \"CT of head for radiotherapy planning\",\n      \"lang\" : \"en\"\n    },\n
+        \   \"id\" : \"429867000\",\n    \"idAndFsnTerm\" : \"429867000 | Computed
+        tomography of head for radiotherapy planning (procedure) |\"\n  }, {\n    \"conceptId\"
+        : \"429858000\",\n    \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n
+        \   \"moduleId\" : \"900000000000207008\",\n    \"effectiveTime\" : \"20080731\",\n
+        \   \"fsn\" : {\n      \"term\" : \"Computed tomography of head and neck (procedure)\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of
+        head and neck\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"429858000\",\n
+        \   \"idAndFsnTerm\" : \"429858000 | Computed tomography of head and neck
+        (procedure) |\"\n  }, {\n    \"conceptId\" : \"408754009\",\n    \"active\"
+        : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\" :
+        \"900000000000207008\",\n    \"effectiveTime\" : \"20040731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of entire head (procedure)\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of
+        entire head\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"408754009\",\n
+        \   \"idAndFsnTerm\" : \"408754009 | Computed tomography of entire head (procedure)
+        |\"\n  }, {\n    \"conceptId\" : \"303658003\",\n    \"active\" : true,\n
+        \   \"definitionStatus\" : \"PRIMITIVE\",\n    \"moduleId\" : \"900000000000207008\",\n
+        \   \"effectiveTime\" : \"20020131\",\n    \"fsn\" : {\n      \"term\" : \"Computed
+        tomography of extracranial soft tissues of the head (procedure)\",\n      \"lang\"
+        : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of extracranial soft
+        tissues of the head\",\n      \"lang\" : \"en\"\n    },\n    \"id\" : \"303658003\",\n
+        \   \"idAndFsnTerm\" : \"303658003 | Computed tomography of extracranial soft
+        tissues of the head (procedure) |\"\n  }, {\n    \"conceptId\" : \"303654001\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"PRIMITIVE\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20020131\",\n    \"fsn\"
+        : {\n      \"term\" : \"Special computed tomography procedure of head (procedure)\",\n
+        \     \"lang\" : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"Special
+        CT procedures of the head\",\n      \"lang\" : \"en\"\n    },\n    \"id\"
+        : \"303654001\",\n    \"idAndFsnTerm\" : \"303654001 | Special computed tomography
+        procedure of head (procedure) |\"\n  }, {\n    \"conceptId\" : \"303653007\",\n
+        \   \"active\" : true,\n    \"definitionStatus\" : \"FULLY_DEFINED\",\n    \"moduleId\"
+        : \"900000000000207008\",\n    \"effectiveTime\" : \"20040731\",\n    \"fsn\"
+        : {\n      \"term\" : \"Computed tomography of head (procedure)\",\n      \"lang\"
+        : \"en\"\n    },\n    \"pt\" : {\n      \"term\" : \"CT of head\",\n      \"lang\"
+        : \"en\"\n    },\n    \"id\" : \"303653007\",\n    \"idAndFsnTerm\" : \"303653007
+        | Computed tomography of head (procedure) |\"\n  } ],\n  \"total\" : 48,\n
+        \ \"limit\" : 50,\n  \"offset\" : 0,\n  \"searchAfter\" : \"WzMwMzY1MzAwN10=\",\n
+        \ \"searchAfterArray\" : [ 303653007 ]\n}"
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 24 Oct 2025 15:49:45 GMT
+      Expires:
+      - '0'
+      Keep-Alive:
+      - timeout=60
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-XSS-Protection:
+      - '0'
+      searchAfter:
+      - WzMwMzY1MzAwN10=
+    status:
+      code: 200
+      message: ''
+version: 1
