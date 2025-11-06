@@ -30,15 +30,15 @@ pandas-stubs = "^2.3.2.250926"
 pre-commit = "^4.3.0"
 
 [tool.poetry.group.openai.dependencies]
-openai = "^2.2.0"
+openai = "^2.7.1"
 
 [tool.poetry.group.dev.dependencies]
 openpyxl = "^3.1.5"
 mypy = "^1.18.2"
 pytest = "^8.4.2"
-coverage = "^7.10.7"
+coverage = "^7.11.0"
 pytest-cov = "^7.0.0"
-ruff = "^0.14.0"
+ruff = "^0.14.3"
 pytest-asyncio = "^1.2.0"
 pytest-recording = "^0.13.4"
 pytest-random-order = "^1.2.0"
@@ -47,10 +47,10 @@ dask = {extras = ["complete"], version = "^2025.9.1"}
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.6.1"
-mkdocs-material = "^9.6.21"
+mkdocs-material = "^9.6.23"
 pymdown-extensions = "^10.16"
 mkdocstrings-python = "^1.18.2"
-mkdocs-macros-plugin = "^1.4.0"
+mkdocs-macros-plugin = "^1.4.1"
 mkdocs-gen-files = "^0.5.0"
 mkdocs-literate-nav = "^0.6.2"
 mkdocs-section-index = "^0.3.10"
