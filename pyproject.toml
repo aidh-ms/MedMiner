@@ -43,7 +43,6 @@ pytest-asyncio = "^1.2.0"
 pytest-recording = "^0.13.4"
 pytest-random-order = "^1.2.0"
 jupyter = "^1.1.1"
-dask = {extras = ["complete"], version = "^2025.9.1"}
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.6.1"
