@@ -11,7 +11,10 @@ services:
       dockerfile: .devcontainer/Dockerfile
     networks:
       - elastic
-    env_file: .env
+    env_file:
+      - path: .env
+      - path: local.env
+        required: false
     environment:
       - no_proxy="127.0.0.1,localhost"
       - NO_PROXY="127.0.0.1,localhost"
