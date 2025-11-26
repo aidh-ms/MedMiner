@@ -24,7 +24,8 @@
 				"GitHub.vscode-pull-request-github",
 				"github.vscode-github-actions",
 				"ms-toolsai.jupyter",
-				"ms-python.debugpy"
+				"ms-python.debugpy",
+				"ms-toolsai.datawrangler"
 			],
 			"settings": {
 				"[python]": {
