@@ -125,9 +125,6 @@ def get_codes(
     """
     base_url = f"https://rxnav.nlm.nih.gov/REST/rxcui/{rxcui}/"
     with httpx.Client(base_url=base_url) as client:
-        test = client.get("allProperties.json", params={"prop": "Codes"})
-        print(test, test.url)
-
         codes = (
             client.get("allProperties.json", params={"prop": "Codes"})
             .json()
