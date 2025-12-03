@@ -1,1 +1,4 @@
-poetry install --with dev,docs,openai
+# Install claude Code
+npm install -g @anthropic-ai/claude-code
+
+uv sync --all-groups
