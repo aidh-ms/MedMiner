@@ -10,9 +10,9 @@ authors:
   family-names: Porschen
   email: c_pors01@uni-muenster.de
   affiliation: Universität Münster
-  orcid: 'https://orcid.org/0000-0001-5355-4531'
+  orcid: "https://orcid.org/0000-0001-5355-4531"
 type: software
-version: 0.0.1
+version: 1.0.0
 date-released: 2025-01-01
 license: MIT
 url: https://github.com/aidh-ms/MedMiner
