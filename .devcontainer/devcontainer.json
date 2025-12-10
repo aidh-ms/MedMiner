@@ -1,0 +1,52 @@
+{
+	"name": "MedMiner project",
+	"service": "medminer",
+	"remoteUser": "vscode",
+	"workspaceFolder": "/workspaces",
+	"dockerComposeFile": "docker-compose.yml",
+	"mounts": [
+		"type=bind,source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,readonly",
+		"type=bind,source=${localEnv:HOME}${localEnv:USERPROFILE}/.gnupg,target=/home/vscode/.gnupg,readonly"
+	],
+	"initializeCommand": "bash .devcontainer/scripts/initialize.sh",
+	"postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
+	"postStartCommand": "bash .devcontainer/scripts/post-start.sh",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"username": "vscode",
+			"userUid": "1000",
+			"userGid": "1000",
+			"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": false
+		},
+		"ghcr.io/devcontainers/features/node:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.mypy-type-checker",
+				"ms-python.debugpy",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.datawrangler",
+				"ms-vsliveshare.vsliveshare",
+				"ms-vscode.vscode-speech",
+				"ms-azuretools.vscode-containers",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"GitHub.vscode-pull-request-github",
+				"github.vscode-github-actions",
+				"GitHub.github-vscode-theme",
+				"charliermarsh.ruff",
+				"tamasfe.even-better-toml",
+				"redhat.vscode-yaml",
+				"esbenp.prettier-vscode",
+				"eamodio.gitlens",
+				"Anthropic.claude-code"
+			]
+		}
+	}
+}

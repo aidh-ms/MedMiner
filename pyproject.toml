@@ -1,0 +1,74 @@
+[project]
+name = "medminer"
+description = "Project to use LLM agents for text analysis in the medical field"
+version = "1.0.0"
+license = "MIT"
+authors = [
+    { name = "Paul-B98", email = "115164840+Paul-B98@users.noreply.github.com" }
+]
+maintainers = [
+    { name = "Paul-B98", email = "115164840+Paul-B98@users.noreply.github.com" }
+]
+readme = "README.md"
+keywords = ["Python Lib", "Doctors letters", "LLM", "AI", "Medical"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.13"
+dependencies = [
+    "gradio>=6.0.2",
+    "httpx>=0.28.1",
+    "httpx-auth>=0.23.1",
+    "langchain>=1.1.0",
+    "langchain-openai>=1.1.0",
+    "langgraph>=1.0.4",
+    "pandas>=2.3.3",
+    "pandas-stubs>=2.3.3.251201",
+    "pydantic-settings>=2.12.0",
+]
+
+[project.urls]
+homepage = "https://github.com/aidh-ms/MedMiner"
+repository = "https://github.com/aidh-ms/MedMiner"
+changelog = "https://github.com/aidh-ms/MedMiner/releases"
+issues = "https://github.com/aidh-ms/MedMiner/issues"
+documentation = "https://github.com/aidh-ms/MedMiner/wiki"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "jupyterlab>=4.4.3",
+    "openpyxl>=3.1.5",
+    "pytest>=8.4.0",
+    "pytest-cov>=6.2.1",
+    "ruff>=0.11.13",
+    "ty>=0.0.1a29",
+]
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-gen-files>=0.5.0",
+    "mkdocs-literate-nav>=0.6.2",
+    "mkdocs-macros-plugin>=1.3.7",
+    "mkdocs-material>=9.6.14",
+    "mkdocs-section-index>=0.3.10",
+    "mkdocstrings-python>=1.16.12",
+    "pymdown-extensions>=10.15",
+]
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py", "*_test.py"]
+filterwarnings = ["ignore::DeprecationWarning"]
+pythonpath = ["src"]
+cache_dir = "/workspaces/.cache/pytest"
+addopts = [
+    "--cov",
+    "--cov-branch",
+    "--cov=src",
+    "--cov-report=xml",
+    "--import-mode=importlib",
+]
