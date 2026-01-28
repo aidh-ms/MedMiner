@@ -194,7 +194,7 @@ def extract(
 
 
 @app.command()
-def list_commands() -> None:
+def list_workflows() -> None:
     """List all available extraction workflows."""
     workflows = registry.keys()
     if not workflows:

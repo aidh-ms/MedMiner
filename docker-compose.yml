@@ -10,7 +10,7 @@ services:
       MEDMINER_MODEL__API_KEY: ""
       MEDMINER_MODEL__BASE_URL: ""
       MEDMINER_ICD_CLIENT_ID: ""
-      MEDMINER_ICD_CLIENT_SECRET: "="
+      MEDMINER_ICD_CLIENT_SECRET: ""
       MEDMINER_SNOMED_BASE_URL: ""
     volumes:
       - ./data/pre_medications:/app/data
