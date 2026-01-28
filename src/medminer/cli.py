@@ -147,7 +147,7 @@ def extract(
     if path.is_file():
         files = [path]
     elif path.is_dir():
-        files = [*path.glob("*.txt")]
+        files = list(path.glob("*.txt"))
         if not files:
             error_console.print(f"[red]Error:[/red] No .txt files found in directory: {path}")
             sys.exit(1)
@@ -194,7 +194,7 @@ def extract(
 
 
 @app.command()
-def list() -> None:
+def list_commands() -> None:
     """List all available extraction workflows."""
     workflows = registry.keys()
     if not workflows:
