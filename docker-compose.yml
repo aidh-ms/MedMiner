@@ -11,7 +11,8 @@ services:
       MEDMINER_MODEL__BASE_URL: ""
       MEDMINER_ICD_CLIENT_ID: ""
       MEDMINER_ICD_CLIENT_SECRET: ""
-      MEDMINER_SNOMED_BASE_URL: ""
+      MEDMINER_SNOMED_BASE_URL: "snowstorm:8080/MAIN"
+      MEDMINER_WORKFLOW: ""
     volumes:
       - ./data/pre_medications:/app/data
       - ./data/snomed:/opt/snomed-data
