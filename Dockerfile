@@ -15,6 +15,9 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 # Final image stage
 FROM python:3.13-slim-bookworm AS final
 
+RUN apt-get update && apt-get install curl jq -y --no-install-recommends \
+    && apt clean
+
 RUN useradd --user-group --system --create-home --no-log-init app \
     && mkdir -p /app \
     && chown -R app:app /app
