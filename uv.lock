@@ -600,7 +600,7 @@ wheels = [
 
 [[package]]
 name = "gradio"
-version = "6.5.0"
+version = "6.5.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiofiles" },
@@ -623,6 +623,7 @@ dependencies = [
     { name = "pydantic" },
     { name = "pydub" },
     { name = "python-multipart" },
+    { name = "pytz" },
     { name = "pyyaml" },
     { name = "safehttpx" },
     { name = "semantic-version" },
@@ -632,9 +633,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "uvicorn" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/90/cb/bdf45c24279b787ef74616ca6f461b605d776ce02c022c3b0cf7a345013c/gradio-6.5.0.tar.gz", hash = "sha256:34dc362b635f9a6c0ab5b4ae0f71af130f916dbd88444e7d591183ba3569c577", size = 40133655, upload-time = "2026-01-28T17:24:03.348Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d9/4f/b095b9a9ddc1ba433121f390df0e8a20a3360ffabd43ec13e86d6ce412b4/gradio-6.5.1.tar.gz", hash = "sha256:31223a1699f15072176dbf48a94f08457228a38263bb4c221a0ccea3a639a595", size = 40132899, upload-time = "2026-01-29T16:39:14.195Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e7/58/4ad18727179d664cfe53d08d8fb9a5b9b461e259f2806571eaadda4ae512/gradio-6.5.0-py3-none-any.whl", hash = "sha256:ceff9abd8e6d802744b6ecaab168e9a3b82384aa421e38e4a79080b9423a80fb", size = 24182715, upload-time = "2026-01-28T17:23:59.305Z" },
+    { url = "https://files.pythonhosted.org/packages/bf/72/4f56a920147ce215e2286defc257a613b3b6d8c90cea323758a99ca0f9fa/gradio-6.5.1-py3-none-any.whl", hash = "sha256:5d49ff9691413ca5411189a694de5cbf1b171e2d49bf9f113952ae8a93c7088d", size = 24183125, upload-time = "2026-01-29T16:39:10.908Z" },
 ]
 
 [[package]]
@@ -2320,6 +2321,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f3/87/f44d7c9f274c7ee665a29b885ec97089ec5dc034c7f3fafa03da9e39a09e/python_multipart-0.0.20.tar.gz", hash = "sha256:8dd0cab45b8e23064ae09147625994d090fa46f5b0d1e13af944c331a7fa9d13", size = 37158, upload-time = "2024-12-16T19:45:46.972Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/45/58/38b5afbc1a800eeea951b9285d3912613f2603bdf897a4ab0f4bd7f405fc/python_multipart-0.0.20-py3-none-any.whl", hash = "sha256:8a62d3a8335e06589fe01f2a3e178cdcc632f3fbe0d492ad9ee0ec35aab1f104", size = 24546, upload-time = "2024-12-16T19:45:44.423Z" },
+]
+
+[[package]]
+name = "pytz"
+version = "2025.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f8/bf/abbd3cdfb8fbc7fb3d4d38d320f2441b1e7cbe29be4f23797b4a2b5d8aac/pytz-2025.2.tar.gz", hash = "sha256:360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3", size = 320884, upload-time = "2025-03-25T02:25:00.538Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/81/c4/34e93fe5f5429d7570ec1fa436f1986fb1f00c3e0f43a589fe2bbcd22c3f/pytz-2025.2-py2.py3-none-any.whl", hash = "sha256:5ddf76296dd8c44c26eb8f4b6f35488f3ccbf6fbbd7adee0b7262d43f0ec2f00", size = 509225, upload-time = "2025-03-25T02:24:58.468Z" },
 ]
 
 [[package]]
