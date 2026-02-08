@@ -1407,6 +1407,8 @@ dependencies = [
     { name = "pandas" },
     { name = "pandas-stubs" },
     { name = "pydantic-settings" },
+    { name = "rich" },
+    { name = "typer" },
 ]
 
 [package.dev-dependencies]
@@ -1440,6 +1442,8 @@ requires-dist = [
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "pandas-stubs", specifier = ">=2.3.3.251201" },
     { name = "pydantic-settings", specifier = ">=2.12.0" },
+    { name = "rich", specifier = ">=14.2.0" },
+    { name = "typer", specifier = ">=0.20.0" },
 ]
 
 [package.metadata.requires-dev]

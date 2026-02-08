@@ -27,6 +27,8 @@ dependencies = [
     "pandas>=2.3.3",
     "pandas-stubs>=2.3.3.251201",
     "pydantic-settings>=2.12.0",
+    "rich>=14.2.0",
+    "typer>=0.20.0",
 ]
 
 [project.urls]
@@ -35,6 +37,9 @@ repository = "https://github.com/aidh-ms/MedMiner"
 changelog = "https://github.com/aidh-ms/MedMiner/releases"
 issues = "https://github.com/aidh-ms/MedMiner/issues"
 documentation = "https://github.com/aidh-ms/MedMiner/wiki"
+
+[project.scripts]
+medminer = "medminer.cli:main"
 
 [build-system]
 requires = ["hatchling"]
