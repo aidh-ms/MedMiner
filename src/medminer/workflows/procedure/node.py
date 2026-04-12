@@ -1,13 +1,12 @@
-"""SNOMED CT Snowstorm API integration for procedure code enrichment.
+"""ICD-11 API integration for procedure code enrichment.
 
-This module provides functionality to enrich extracted procedure data with SNOMED CT
-codes using the Snowstorm API. It includes LLM-assisted selection of the best matching
+This module provides functionality to enrich extracted procedure data with ICD-11
+codes using the ICD-11 API. It includes LLM-assisted selection of the best matching
 codes when multiple candidates are found.
 """
 
-from itertools import combinations
 from textwrap import dedent
-from typing import Any, Iterator, Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel
 
@@ -16,35 +15,38 @@ from medminer.workflows.base.node.base import HTTPBaseNode
 from medminer.workflows.procedure.schema import ExtractedProcedure, Procedure, ProcedureState
 
 
-class SnomedSelectionResponseFormat(BaseModel):
-    """LLM selection of the best SNOMED CT match."""
-    selected_concept_id: str
+class ICDSelectionResponseFormat(BaseModel):
+    """LLM selection of the best ICD-11 match."""
+    code: str
 
 
-class SnomedProcedureLookup(HTTPBaseNode):
-    """Lookup SNOMED CT codes for extracted procedures using the Snowstorm API."""
+class ICDProcedureLookup(HTTPBaseNode):
+    """Lookup ICD-11 codes for extracted procedures using the ICD-11 API."""
     prompt = dedent("""\
-        You are a medical coding expert. Given a procedure description and a list of SNOMED CT matches, select the most appropriate SNOMED CT code.
+        You are a medical coding expert. Given a procedure description and a list of ICD-11 matches, select the most appropriate ICD-11 code.
 
         Procedure Information:
         - Original reference: {ref}
         - Procedure name: {name}
         - Translated name: {translated}
-        - Search term: {search_term}
 
-        Available SNOMED CT Matches:
+        Available ICD-11 Matches:
         {candidates}
 
-        Select the most appropriate SNOMED CT code that best matches the procedure. Consider:
+        Available ICD-11 Matches (sorted by relevance score):
+        {candidates}
+
+        Select the most appropriate ICD-11 code that best matches the procedure. Consider:
         1. Specificity: Prefer more specific codes over general ones
         2. Accuracy: The code should accurately represent the procedure
         3. Clinical relevance: The code should be clinically meaningful
+        4. Search score: Higher scores indicate better matches, but use your medical expertise
 
-        If none of the matches are appropriate, select the first concept ID and explain why in your reasoning.
+        Return the ICD-11 code (e.g., "QB94.Z") of the best match.
     """)
 
     def __init__(self, model, **kwargs: Any) -> None:
-        """Initialize the SNOMED procedure lookup node.
+        """Initialize the ICD procedure lookup node.
 
         Args:
             model: The language model to use for selection.
@@ -52,16 +54,24 @@ class SnomedProcedureLookup(HTTPBaseNode):
         """
         super().__init__(
             model,
-            base_url=settings.SNOWSTORM_BASE_URL,
-            params = {
-                "activeFilter": "true",
-                "termActive": "true",
+            base_url="https://id.who.int/",
+            headers={
+                "Accept-Language": "en",
+                "API-Version": "v2",
+                "chapterFilter": "ICHI",
+            },
+            auth={
+                "client_id": settings.ICD_CLIENT_ID,
+                "client_secret": settings.ICD_CLIENT_SECRET,
+                "scope": ["icdapi_access"],
+                "token_url": "https://icdaccessmanagement.who.int/connect/token",
             },
             **kwargs
         )
 
+
     def __call__(self, state: ProcedureState) -> dict[Literal["processed_data"], list[Procedure]]:
-        """Process extracted procedures and enrich with SNOMED CT codes.
+        """Process extracted procedures and enrich with ICD-11 codes.
 
         Args:
             state: The current procedure extraction state containing extracted_data.
@@ -71,83 +81,72 @@ class SnomedProcedureLookup(HTTPBaseNode):
         """
         procedures: list[Procedure] = []
         for proc in state.extracted_data:
-            snomed_id, snomed_fsn = "", ""
-            if settings.SNOWSTORM_BASE_URL:
-                snomed_id, snomed_fsn = self._get_snomed_info(proc)
+            icd11_code, icd11_title = "", ""
+            if settings.ICD_CLIENT_ID and settings.ICD_CLIENT_SECRET:
+                icd11_code, icd11_title = self._get_icd11_data(proc)
 
             procedures.append(
                 Procedure.model_validate({
                     **proc.model_dump(),
-                    "snomed_id": snomed_id,
-                    "snomed_fsn": snomed_fsn,
+                    "icd11_code": icd11_code,
+                    "icd11_title": icd11_title,
                 })
             )
 
         return {"processed_data": procedures}
 
-    def _get_snomed_info(self, proc: ExtractedProcedure) -> tuple[str, str]:
+    def _get_icd11_data(self, proc: ExtractedProcedure) -> tuple[str, str]:
         """
-        Get the SNOMED CT code for a procedure.
+        Get the ICD-11 code for a procedure.
 
         Args:
             proc: The extracted procedure data
 
         Returns:
-            Tuple of (snomed_id, snomed_fsn)
+            Tuple of (icd11_code, icd11_title)
         """
-        for query in self._build_ecl_queries(proc.search_term):
-            response = self._make_request("concepts", params={"ecl": query})
-            assert isinstance(response, dict)
+        response = self._make_request(
+            "icd/release/11/2022-02/mms/search",
+            params={"q": proc.name_translated, "useFlexisearch": "true"}
+        )
+        assert isinstance(response, dict)
 
-            candidates = sorted([
-                {"concept_id": candidate.get("conceptId", ""), "fsn": candidate.get("fsn", {}).get("term")}
-                for candidate in response.get("items", [])
-                if candidate.get("definitionStatus") in ["FULLY_DEFINED", "PRIMITIVE"]
-            ], key=lambda x: len(x["fsn"]))
+        candidates = [
+            {
+                "code": candidate.get("theCode", ""),
+                "score": candidate.get("score", 0.0),
+                "title": candidate.get("title", ""),
+            }
+            for candidate in response.get("destinationEntities", [])
+            if candidate.get("score", 0.0) > 0.3
+        ]
 
-            if not response:
-                continue
+        if not candidates:
+            return "", ""
 
-            candidates_text = "\n".join(
-                [f"- Concept ID: {candidate['concept_id']}, FSN: {candidate['fsn']}" for candidate in candidates]
-            )
-            selected = self._invoke_model(
-                system_prompt="You are a medical coding assistant.",
-                user_prompt=self.prompt.format(
-                    ref=proc.reference,
-                    name=proc.name,
-                    translated=proc.name_translated,
-                    search_term=proc.search_term,
-                    candidates=candidates_text
-                ),
-                response_format=SnomedSelectionResponseFormat
-            )
-            if selected:
-                for candidate in candidates:
-                    if candidate["concept_id"] == selected.selected_concept_id:
-                        return candidate["concept_id"], candidate["fsn"]
+        for candidate in candidates:
+            if candidate.get("score", 0.0) == 1:
+                return candidate.get("code", ""), candidate.get("title", "")
 
-        return "", ""
 
-    def _build_ecl_queries(self, term: str) -> Iterator[str]:
-        """
-        Build ECL queries with progressively relaxed constraints.
+        candidates_text = "\n".join([
+            f"- Code: {c.get('code', '')}, Title: {c.get('title', '')}, Score: {c.get('score', 0):.2f}"
+            for c in candidates
+        ])
+        selected = self._invoke_model(
+            system_prompt="You are a medical coding assistant.",
+            user_prompt=self.prompt.format(
+                ref=proc.reference,
+                name=proc.name,
+                translated=proc.name_translated,
+                candidates=candidates_text
+            ),
+            response_format=ICDSelectionResponseFormat,
+        )
+        if selected:
+            for candidate in candidates:
+                if candidate.get("code") != selected.code:
+                    continue
+                return candidate.get("code", ""), candidate.get("title", "")
 
-        Args:
-            term: The search term
-
-        Yields:
-            ECL query strings
-        """
-        procedure_definition = "< 71388002|Procedure|"
-
-        yield f'{procedure_definition} {{{{ term = "{term}"}}}}'
-
-        words = term.split(" ")
-        if len(words) > 1:
-            if len(words) > 2:
-                for i in reversed(range(1, len(words) - 1)):
-                    word_comps = [f'term = ("{" ".join(word_comp)}")' for word_comp in combinations(words, i + 1)]
-                    yield f'{procedure_definition} {{{{ {", ".join(word_comps)} }}}}'
-
-            yield f'{procedure_definition} {{{{ term = ("{'" "'.join(words)}")}}}}'
+        return candidates[0].get("code", ""), candidates[0].get("title", "")
