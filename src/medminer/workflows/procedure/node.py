@@ -30,9 +30,6 @@ class ICDProcedureLookup(HTTPBaseNode):
         - Procedure name: {name}
         - Translated name: {translated}
 
-        Available ICD-11 Matches:
-        {candidates}
-
         Available ICD-11 Matches (sorted by relevance score):
         {candidates}
 
@@ -106,7 +103,7 @@ class ICDProcedureLookup(HTTPBaseNode):
             Tuple of (icd11_code, icd11_title)
         """
         response = self._make_request(
-            "icd/release/11/2022-02/mms/search",
+            "icd/entity/search",
             params={"q": proc.name_translated, "useFlexisearch": "true"}
         )
         assert isinstance(response, dict)
