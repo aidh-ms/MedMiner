@@ -51,7 +51,7 @@ dev = [
     "openpyxl>=3.1.5",
     "pytest>=8.4.0",
     "pytest-cov>=6.2.1",
-    "ruff>=0.11.13",
+    "ruff>=0.15.11",
     "ty>=0.0.1a29",
 ]
 docs = [
