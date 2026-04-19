@@ -48,7 +48,6 @@ class Settings(BaseSettings):
         MODEL: Language model configuration settings.
         BASE_DIR: Base directory for storing extracted data (CSV files).
         SPLIT_PATIENT: Whether to split output files by patient ID.
-        SNOWSTORM_BASE_URL: Base URL for the SNOMED Snowstorm server.
         ICD_CLIENT_ID: Client ID for ICD-11 API authentication.
         ICD_CLIENT_SECRET: Client Secret for ICD-11 API authentication.
 
@@ -75,12 +74,6 @@ class Settings(BaseSettings):
     SPLIT_PATIENT: bool = Field(
         default=False,
         description="Whether to split output files by patient ID",
-    )
-
-    # SNOWSTORM (SNOMED CT) settings
-    SNOWSTORM_BASE_URL: str = Field(
-        default="",
-        description="Base URL for the SNOMED Snowstorm server",
     )
 
     # ICD-11 settings
