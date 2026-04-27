@@ -28,7 +28,7 @@ dependencies = [
     "pandas-stubs>=3.0.0.260204",
     "pydantic-settings>=2.14.0",
     "rich>=15.0.0",
-    "typer>=0.24.2",
+    "typer>=0.25.0",
 ]
 
 [project.urls]
