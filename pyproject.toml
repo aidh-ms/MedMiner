@@ -47,7 +47,7 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
-    "jupyterlab>=4.4.3",
+    "jupyterlab>=4.5.7",
     "openpyxl>=3.1.5",
     "pytest>=8.4.0",
     "pytest-cov>=6.2.1",
