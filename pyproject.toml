@@ -65,6 +65,9 @@ docs = [
     "pymdown-extensions>=10.15",
 ]
 
+[tool.uv]
+exclude-newer = "P7D"
+
 [tool.pytest.ini_options]
 python_files = ["test_*.py", "*_test.py"]
 filterwarnings = ["ignore::DeprecationWarning"]
