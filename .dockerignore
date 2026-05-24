@@ -89,7 +89,6 @@ venv/
 .vscode/
 
 .cache/
-.claude/
 .devcontainer/
 .github/
 data/
@@ -101,5 +100,4 @@ tests/
 .pre-commit-config.yaml
 .ruff.toml
 CITATION.cff
-CLAUDE.md
 mkdocs.yml
