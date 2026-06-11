@@ -1,5 +1,5 @@
 # Build stage
-FROM python:3.13-slim-bookworm AS builder
+FROM python:3.14-slim-bookworm AS builder
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 WORKDIR /app
@@ -13,7 +13,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 
 # Final image stage
-FROM python:3.13-slim-bookworm AS final
+FROM python:3.14-slim-bookworm AS final
 
 RUN apt-get update && apt-get install curl jq -y --no-install-recommends \
     && apt clean
