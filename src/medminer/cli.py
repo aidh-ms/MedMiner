@@ -66,11 +66,7 @@ def extract(
         bool,
         typer.Option("--split-patient/--no-split-patient", help="Whether to split output files by patient ID"),
     ] = False,
-    # SNOMED settings
-    snomed_base_url: Annotated[
-        str | None,
-        typer.Option("--snomed-base-url", help="Base URL for the SNOMED Snowstorm server"),
-    ] = None,
+
     # ICD-11 settings
     icd_client_id: Annotated[
         str | None,
@@ -92,7 +88,6 @@ def extract(
         base_url: Optional base URL override.
         base_dir: Optional base directory for output files.
         split_patient: Whether to split output files by patient ID.
-        snomed_base_url: Optional SNOMED Snowstorm server URL.
         icd_client_id: Optional ICD-11 API client ID.
         icd_client_secret: Optional ICD-11 API client secret.
     """
@@ -125,10 +120,6 @@ def extract(
         settings.BASE_DIR = base_dir
     if split_patient:
         settings.SPLIT_PATIENT = split_patient
-
-    # SNOMED settings
-    if snomed_base_url:
-        settings.SNOWSTORM_BASE_URL = snomed_base_url
 
     # ICD-11 settings
     if icd_client_id:
